@@ -1,0 +1,20 @@
+.conteudo {
+    min-height: calc(100vh - (72px + 120px))
+}
+
+.img {
+    height: calc(100vh*0.4)
+}
+
+.img-detalhes{
+    height: 300px      
+}
+
+@media(min-width: 768px) {
+    .img {
+        height: calc(100vh*0.3)
+    }
+    .img-detalhes{
+        height: 300px      
+    }
+}
