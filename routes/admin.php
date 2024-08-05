@@ -9,9 +9,10 @@ use App\Http\Controllers\Admin\MensagemController as AdminMensagemController;
 use App\Http\Controllers\Admin\MovimentoController as AdminMovimentoController;
 use App\Http\Controllers\Admin\TipoImovelController as AdminTipoImovelController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
+Route::prefix('/admin')->name('admin.')->middleware(['auth', CheckAdmin::class])->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
 
     /**
