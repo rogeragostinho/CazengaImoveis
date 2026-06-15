@@ -18,13 +18,13 @@ class UsersSeeder extends Seeder
         User::create([
             'tipo' => 'admin',
             'name' => 'Roger',
-            'email' => 'b@gmail.com',
-            'password' => bcrypt('b'),
+            'email' => 'admin@example.com',
+            'password' => bcrypt('admin'),
         ]);
         User::create([
             'tipo' => 'intermediario',
             'name' => 'Admin',
-            'email' => 'joao@gmail.com',
+            'email' => 'joao@example.com',
             'password' => bcrypt('joao'),
         ]);
     }

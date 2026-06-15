@@ -182,7 +182,7 @@ class ImovelController extends Controller
     {
         Imagem::create([
             'id_imovel' => $id,
-            'url' => $imagem->store('imoveis')
+            'url' => $imagem->store('public/imoveis')
         ]);
     }
 
