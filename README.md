@@ -21,7 +21,7 @@ cd CazengaImoveis
 ```
 
 ### 2. Configurar o ambiente
-
+ 
 ```bash
 cp .env.example .env
 ```
