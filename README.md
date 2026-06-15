@@ -66,6 +66,10 @@ docker compose exec app bash -c "chown -R www-data:www-data /var/www/storage /va
 docker compose exec app bash -c "chmod -R 775 storage/app/public"
 ```
 
+```bash
+cp -r public/img storage/app/public/imoveis
+```
+
 ### 8. Criar link simbólico para ficheiros públicos
 
 ```bash
