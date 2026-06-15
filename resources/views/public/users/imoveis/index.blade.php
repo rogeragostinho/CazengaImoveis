@@ -17,9 +17,6 @@
                         @else
                             <img src="{{ asset('img/4.jfif') }}" class="img  card-img-top img-fluid" alt="...">
                         @endif
-                        <p>
-                           {{  $imovel->imagens[0]->url }}
-                        </p>
                         <div class="card-body">
                             <h5 class="card-title text-truncate">{{ $imovel->tipo }} para {{ $imovel->contrato }}</h5>
                             <p class="card-text text-truncate">{{ $imovel->descricao }} </p>

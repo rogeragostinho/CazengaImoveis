@@ -31,14 +31,8 @@
 
                         @if ($i == 0)
                             <div class="carousel-item active">
-                                {{--
                                  <img src="{{ url('storage/' . $imoveis[$i]->imagens[0]->url) }}"
                                     class="d-block w-100 img-carrousel" alt="...">
-                                --}}
-
-                                <img src="{{ url($imoveis[$i]->imagens[0]->url) }}"
-                                    class="d-block w-100 img-carrousel" alt="...">
-                            
 
                                 <div class="carousel-caption d-none d-md-block w-50 mx-auto mb-5 px-5">
                                     <div class="row bg-white text-dark px-4 pt-4 pb-3 align-items-center">
@@ -106,12 +100,9 @@
                             </div>
                         @else
                             <div class="carousel-item">
-                                {{-- 
                                 <img src="{{ url('storage/' . $imoveis[$i]->imagens[0]->url) }}"
                                     class="d-block w-100 img-carrousel" alt="...">
-                                 --}}
-                                <img src="{{ url($imoveis[$i]->imagens[0]->url) }}"
-                                    class="d-block w-100 img-carrousel" alt="...">
+
                                 <div class="carousel-caption d-none d-md-block w-50 mx-auto mb-5 px-5">
                                     <div class="row bg-white text-dark px-4 pt-4 pb-3 align-items-center">
                                         <div class="col">
@@ -355,11 +346,7 @@
                     <div class="col-md-6 col-lg-4 mb-3">
                         <div class="card w-100" style="width: 18rem;">
                             <a href="{{ route('imoveis.show', $imoveis[$i]->id) }}" class="">
-                                {{-- 
                                 <img src="{{ url('storage/' . $imoveis[$i]->imagens[0]->url) }}"
-                                    class="img d-block w-100 card-img-top img-fluid" alt="...">
-                                 --}}
-                                <img src="{{ url($imoveis[$i]->imagens[0]->url) }}"
                                     class="img d-block w-100 card-img-top img-fluid" alt="...">
                             </a>
 
