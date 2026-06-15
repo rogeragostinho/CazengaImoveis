@@ -156,7 +156,7 @@
                                         <li><a class="dropdown-item" href="{{ route('users.links') }}">Links
                                             </a></li>
                                     @endif
-                                    @if (auth()->user()->tipo == 'administrador')
+                                    @if (auth()->user()->tipo == 'admin')
                                         <li><a class="dropdown-item" href="{{ route('admin.index') }}">Admin Dashboard
                                             </a></li>
                                     @endif

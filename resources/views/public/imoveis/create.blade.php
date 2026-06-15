@@ -10,6 +10,9 @@
                 <div class="card">
                     <div class="card-body">
                         {{-- FORMULARIO --}}
+                        <p>
+                            {{ route('imoveis.store') }}
+                        </p>
                         <form action="{{ route('imoveis.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="status" value="pendente">

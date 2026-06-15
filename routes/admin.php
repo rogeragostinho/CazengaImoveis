@@ -18,19 +18,17 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', CheckAdmin::class])
     /**
      * Imóveis
      */
-    Route::post('/imoveis/{id}/comissao', [AdminImovelController::class, 'comissao'])->name('imoveis.comissao');
-    Route::controller(AdminImovelController::class)->prefix('imoveis')->group(function () {
-        Route::name('imoveis.', function () {
+    Route::resource('imoveis', AdminImovelController::class);
+    Route::controller(AdminImovelController::class)->prefix('imoveis')->name('imoveis.')->group(function () {
             Route::get('/ativos', 'ativos')->name('ativos');
             Route::get('/pendentes', 'pendentes')->name('pendentes');
             Route::post('/ativar', 'ativar')->name('ativar');
             Route::post('/desativar', 'desativar')->name('desativar');
-        });
-
-        // Tipos
-        Route::resource('tipos', AdminTipoImovelController::class)->except(['show']);
     });
-    Route::resource('imoveis', AdminImovelController::class);
+
+    Route::resource('tipos', AdminTipoImovelController::class)->except(['show']);
+    
+    Route::post('/imoveis/{id}/comissao', [AdminImovelController::class, 'comissao'])->name('imoveis.comissao');
 
     /**
      * Usuários

@@ -33,10 +33,11 @@
                     <div class="col-md-6 col-lg-4 mb-3">
                         <div class="card w-100" style="width: 18rem;">
                             <a href="{{ route('imoveis.show', $imoveis[$i]->id) }}" class="">
-                                <img src="{{ url('storage/' . $imoveis[$i]->imagens[0]->url) }}"
+                                {{--<img src="{{ url('storage/' . $imoveis[$i]->imagens[0]->url) }}"
+                                    class="img d-block w-100 card-img-top img-fluid" alt="...">--}}
+                                <img src="{{ asset($imoveis[$i]->imagens[0]->url) }}"
                                     class="img d-block w-100 card-img-top img-fluid" alt="...">
                             </a>
-
                             <div class="card-body">
                                 <p class="card-text text-truncate text-info fw-bold mb-2" style="font-size: 1.2em">
                                     {{ number_format($imoveis[$i]->preco,2,',','.') }} Kz

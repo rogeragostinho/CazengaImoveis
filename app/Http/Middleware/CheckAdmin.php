@@ -20,7 +20,7 @@ class CheckAdmin
         $response = $next($request);
 
         if(Auth::check()){
-            if(Auth::user()->tipo === "administrador"){
+            if(Auth::user()->tipo === "admin"){
                 return $response;
             }
         }

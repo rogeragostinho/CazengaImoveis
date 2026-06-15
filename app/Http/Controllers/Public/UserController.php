@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     //
     public function imoveis(){
-        return view('users.imoveis.index');
+        return view('public.users.imoveis.index');
     }
     
     public function show(string $id)
